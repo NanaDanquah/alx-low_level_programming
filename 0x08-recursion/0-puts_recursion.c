@@ -1,13 +1,17 @@
 #include "main.h"
 /**
- * main - check the code
+ * _puts_recursion - works like puts();
+ * @s: input
  *
- * Return: Always 0
+ * Return: Always 0 (success)
  */
-int main(void)
+void _puts_recursion(char *s)
 {
-	char Boy = "this is the new way";
-
-	putchar(Boy);
-	return (0);
+	if (*s)
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
+	else
+		_putchar('\n');
 }
